@@ -1,0 +1,30 @@
+-- File: correct2.ka
+-- Akolouthia Fibonacci me while loop
+
+const MAXN = 15: int;
+
+fun fibonacci(n: int) -> int:
+    a, b, tmp, i: int;
+    a = 0;
+    b = 1;
+    i = 2;
+    while (i <= n):
+        tmp = a + b;
+        a = b;
+        b = tmp;
+        i = i + 1;
+    od;
+    return b;
+nuf;
+
+fun main():
+    i: int;
+    writeText("Akolouthia Fibonacci:\n");
+    for i in [1: MAXN]:
+        writeText("fib(");
+        writeInt(i);
+        writeText(") = ");
+        writeInt(fibonacci(i));
+        writeText("\n");
+    rof;
+nuf;

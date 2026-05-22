@@ -1,0 +1,37 @@
+-- File: correct1.ka
+-- Paradeigma me for loop, synartiseis kai @def
+
+@def N 8
+
+a, b, result: int;
+
+fun square(n: int) -> int:
+    i: int;
+    i = n * n;
+    return i;
+nuf;
+
+fun printLine():
+    writeText("----------\n");
+nuf;
+
+fun main():
+    i: int;
+    writeText("Tetragwna:\n");
+    for i in [1: N]:
+        writeInt(i);
+        writeText(" * ");
+        writeInt(i);
+        writeText(" = ");
+        writeInt(square(i));
+        writeText("\n");
+    rof;
+    printLine();
+    writeText("Dose 2 arithmous: ");
+    a = readInt();
+    b = readInt();
+    result = a + b;
+    writeText("Athroisma: ");
+    writeInt(result);
+    writeText("\n");
+nuf;
