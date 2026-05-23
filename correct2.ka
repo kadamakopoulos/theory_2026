@@ -1,5 +1,5 @@
--- File: correct2.ka
--- Akolouthia Fibonacci me while loop
+--File: correct2.ka
+--Akolouthia Fibonacci me while loop
 
 const MAXN = 15: int;
 
