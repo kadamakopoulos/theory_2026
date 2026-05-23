@@ -1,19 +1,19 @@
 #include "kappalib.h"
 
-/* stathera gia to plithos twn fibonacci pou tha ypologistoun */
+//stathera gia to plithos twn fibonacci pou tha upologistoun
 const int MAXN = 15;
 
-/* synartisi pou ypologizei ton n-osto arithmo fibonacci */
+//sunartisi pou upologizei ton n-osto arithmo fibonacci 
 int fibonacci ( int n ) 
 { 
     int a , b , tmp , i;
 
-    /* arxikopoiisi metavlitwn */
+    //arxikopoiisi metablitwn 
     a = 0;
     b = 1;
     i = 2;
 
-    /* ypologismos fibonacci me while */
+    //upologismos fibonacci me while 
     while ( i <= n ) 
     { 
         tmp = a + b;
@@ -22,7 +22,7 @@ int fibonacci ( int n )
         i = i + 1;
     }
 
-    /* epistrofi apotelesmatos */
+    //epistrofi apotelesmatos
     return b ;
 } 
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     writeText ( "Akolouthia Fibonacci:\n" );
 
-    /* typtw ola ta fibonacci mexri MAXN */
+    //tupwnei ola ta fibonacci mexri MAXN 
     for ( int i = 1 ; i <= 15 ; ++i ) 
     { 
         writeText ( "fib(" );
