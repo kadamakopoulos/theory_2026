@@ -1,9 +1,9 @@
 #include "kappalib.h"
 
-/* kaθolikes metavlites */
+//katholikes metablites
 int a , b , result;
 
-/* synartisi ypologismou tetragwnou */
+//sunartisi upologismou tetragwnou 
 int square ( int n ) 
 { 
     int i;
@@ -11,7 +11,7 @@ int square ( int n )
     return i ;
 } 
 
-/* synartisi gia na typtei grammi */
+//sunartisi gia na tupwnei grammi 
 void printLine ( ) 
 { 
     writeText ( "----------\n" );
@@ -21,10 +21,10 @@ int main(int argc, char *argv[])
 { 
     int i;
 
-    /* typtw titlo */
+    //tupwnei titlo
     writeText ( "Tetragwna:\n" );
 
-    /* epilogi apo 1 ews 8 */
+    //epilogi apo 1 ews 8 
     for ( int i = 1 ; i <= 8 ; ++i ) 
     { 
         writeInt ( i );
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
     printLine ( );
 
-    /* diavazw 2 arithmous kai ypologizw athroisma */
+    //diavazw 2 arithmous kai ypologizw athroisma
     writeText ( "Dose 2 arithmous: " );
     a = readInt ( );
     b = readInt ( );
