@@ -1,4 +1,5 @@
-// kappalib.h - standard library for Kappa language
+//kappalib.h-standard library for kappa language
+// This code was written by Prof. Vasilis Samoladas
 #ifndef KAPPALIB_H
 #define KAPPALIB_H
 
