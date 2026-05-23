@@ -10,7 +10,7 @@
     int yylex(void);
     FILE * fp;
 
-    int ca_count = 0; /* counter for compact array loop vars */
+    int ca_count = 0; /*counter for compact array loop vars*/
 %}
 
 %union {
@@ -110,7 +110,7 @@
 %type <str> compactArray
 
 
-/* Operation Priorities */
+/*Operation Priorities*/
 %nonassoc TK_SEMIC
 %right TK_EQ TK_PLUSEQ TK_MINUSEQ TK_MULEQ TK_DIVEQ TK_MODEQ
 %left TK_OR
@@ -146,7 +146,7 @@ list:
         { $$ = template("%s;", $1); }
     ;
 
-/* ---- record (comp) declarations ---- */
+/*----record (comp) declarations----*/
 recordDec:
     KW_COMP TK_ID TK_COLON recordBody KW_ENDCOMP TK_SEMIC
     {
@@ -170,7 +170,7 @@ recordBody:
         { $$ = template("%s    void (*%s)();\n", $1, $3); }
     ;
 
-/* ---- read/write builtins ---- */
+/*----read/write builtins----*/
 
 
 fArgs:
@@ -189,11 +189,11 @@ defStatments:
         { $$ = template("%s %s;", $1, $2); }
     ;
 
-/* ---- compact array ---- */
+/*----compact array----*/
 compactArray:
     TK_ID TK_LARROW TK_LBRACKET expr KW_FOR TK_ID TK_COLON expr TK_RBRACKET TK_COLON type TK_SEMIC
     {
-        /* arr <- [expr for elm:size] : type; */
+        /*arr <- [expr for elm:size] : type;*/
         $$ = template("%s * %s = (%s*) malloc ( %s * sizeof ( %s ) ) ;\nfor ( int %s = 0 ; %s < %s ; ++%s ) { %s [ %s ] = %s ; }\n",
             $11, $1, $11, $8, $11,
             $6, $6, $8, $6,
@@ -212,7 +212,7 @@ compactArray:
     }
     ;
 
-/* ---- function declarations ---- */
+/*----function declarations----*/
 funcDec:
     KW_DEF TK_ID TK_LPARENTH args TK_RPARENTH TK_ARROW type TK_COLON defStatments KW_RETURN expr TK_SEMIC KW_ENDDEF TK_SEMIC
     {
