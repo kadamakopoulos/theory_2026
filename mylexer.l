@@ -8,7 +8,7 @@
 
 int lineNum = 1;
 
-/* ---- @def table ---- */
+/*----@def table----*/
 #define MAX_DEFS 100
 char def_names[MAX_DEFS][256];
 char def_values[MAX_DEFS][1024];
@@ -42,7 +42,7 @@ int stack_top = 0;
 
 %}
 
-/********************* DEFINITIONS *************************/
+/*********************DEFINITIONS*************************/
 
 ID              [a-zA-Z][0-9a-zA-Z_]*
 DIGIT           [0-9]
@@ -57,7 +57,7 @@ MEMBER          "#"{ID}
 %option noyywrap
 %option yylineno
 
-/********************* RULES *************************/
+/*********************RULES*************************/
 %%
 
 "@def"[ \t]+{ID}[ \t]+[^\n]+ {
